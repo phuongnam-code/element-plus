@@ -109,7 +109,7 @@
 }
 
 @include b(upload-list) {
-  margin: 0;
+  margin: 10px 0 0;
   padding: 0;
   list-style: none;
 
@@ -117,8 +117,8 @@
     transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
     font-size: 14px;
     color: var(--el-text-color-regular);
-    line-height: 1.8;
-    margin-top: 5px;
+    line-height: 2.1;
+    margin-bottom: 0;
     position: relative;
     box-sizing: border-box;
     border-radius: 4px;
@@ -141,10 +141,6 @@
       padding-right: 0;
     }
 
-    &:first-child {
-      margin-top: 10px;
-    }
-
     & .#{$namespace}-icon--upload-success {
       color: var(--el-color-success);
     }
@@ -152,12 +148,12 @@
     .#{$namespace}-icon--close {
       display: none;
       position: absolute;
-      top: 5px;
+      top: 50%;
       right: 5px;
       cursor: pointer;
       opacity: 0.75;
       color: var(--el-text-color-regular);
-      //transform: scale(.7);
+      transform: translateY(-50%);
 
       &:hover {
         opacity: 1;
@@ -167,12 +163,13 @@
     & .#{$namespace}-icon--close-tip {
       display: none;
       position: absolute;
-      top: 5px;
+      top: 50%;
       right: 5px;
       font-size: 12px;
       cursor: pointer;
       opacity: 1;
       color: var(--el-color-primary);
+      transform: translateY(-50%);
     }
 
     &:hover {
